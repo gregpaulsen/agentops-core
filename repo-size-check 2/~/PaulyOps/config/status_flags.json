@@ -1,0 +1,30 @@
+{
+  "check_git": true,
+  "check_router": false,
+  "check_endpoints": false,
+  "check_backup_upload": true,
+  "check_launchd_jobs": true,
+  "check_launchd": true,
+  "check_provider_credentials": true,
+  "check_spotlight": true,
+  "git_repos": [
+    "/Users/gregpaulsen/Desktop/repo-size-check"
+  ],
+  "git_paths": [
+    "/Volumes/BigSkyAgSSD/BigSkyAg",
+    "/Volumes/BigSkyAgSSD/PaulyOps",
+    "/Volumes/BigSkyAgSSD/agentops-core"
+  ],
+  "skip_git_repos": [
+    "/Volumes/BigSkyAgSSD/agentops-core",
+    "/Volumes/BigSkyAgSSD/PaulyOps"
+  ],
+  "endpoint_urls": [],
+  "launchd_jobs": [
+    "com.bigsky.nightlyreport"
+  ],
+  "skip_launchd_jobs": [
+    "com.bigsky.backup.10pm",
+    "com.bigsky.router.watch"
+  ]
+}

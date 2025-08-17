@@ -1,0 +1,6 @@
+Equipment Maintenance Log
+Date: 2024-12-12
+Equipment: Tractor #3
+Issue: Hydraulic fluid leak
+Status: Scheduled for repair
+Priority: Medium

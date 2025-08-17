@@ -1,0 +1,367 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "PaulyOps Multi-Tenant Platform",
+    "description": "White-label identity + automation platform with OIDC/OAuth2 authentication",
+    "version": "1.0.0",
+    "contact": {
+      "name": "PaulyOps Support",
+      "email": "support@paulyops.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "System Health Check",
+        "description": "Get comprehensive system health status",
+        "tags": ["System"],
+        "responses": {
+          "200": {
+            "description": "System health status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {"type": "string", "example": "healthy"},
+                    "timestamp": {"type": "string", "format": "date-time"},
+                    "checks": {
+                      "type": "object",
+                      "properties": {
+                        "environment": {"type": "boolean"},
+                        "paths": {"type": "boolean"},
+                        "credentials": {"type": "boolean"},
+                        "dependencies": {"type": "boolean"}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/config": {
+      "get": {
+        "summary": "Get Configuration",
+        "description": "Get current tenant configuration",
+        "tags": ["Configuration"],
+        "security": [{"BearerAuth": []}],
+        "responses": {
+          "200": {
+            "description": "Configuration data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tenant": {"type": "string"},
+                    "plan": {"type": "string"},
+                    "storage_provider": {"type": "string"},
+                    "feature_flags": {"type": "object"},
+                    "limits": {"type": "object"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/backups": {
+      "get": {
+        "summary": "List Backups",
+        "description": "Get backup status and history",
+        "tags": ["Backups"],
+        "security": [{"BearerAuth": []}],
+        "responses": {
+          "200": {
+            "description": "Backup information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "current_backups": {"type": "integer"},
+                    "archive_files": {"type": "integer"},
+                    "total_size_gb": {"type": "number"},
+                    "backup_dir": {"type": "string"},
+                    "archive_dir": {"type": "string"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Backup",
+        "description": "Trigger manual backup creation",
+        "tags": ["Backups"],
+        "security": [{"BearerAuth": []}],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "dry_run": {"type": "boolean", "default": false}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Backup created successfully"
+          }
+        }
+      }
+    },
+    "/files": {
+      "get": {
+        "summary": "List Files",
+        "description": "Get file listing and metadata",
+        "tags": ["Files"],
+        "security": [{"BearerAuth": []}],
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "description": "Directory path to list",
+            "schema": {"type": "string"}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File listing",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {"type": "string"},
+                      "path": {"type": "string"},
+                      "size": {"type": "integer"},
+                      "modified": {"type": "string", "format": "date-time"},
+                      "type": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Upload File",
+        "description": "Upload file to ingest folder",
+        "tags": ["Files"],
+        "security": [{"BearerAuth": []}],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "File uploaded successfully"
+          }
+        }
+      }
+    },
+    "/operations": {
+      "get": {
+        "summary": "List Operations",
+        "description": "Get recent operations log",
+        "tags": ["Operations"],
+        "security": [{"BearerAuth": []}],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of operations to return",
+            "schema": {"type": "integer", "default": 50}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operations log",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {"type": "string"},
+                      "operation": {"type": "string"},
+                      "status": {"type": "string"},
+                      "timestamp": {"type": "string", "format": "date-time"},
+                      "duration": {"type": "number"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "get": {
+        "summary": "OAuth Login",
+        "description": "Redirect to OIDC provider for authentication",
+        "tags": ["Authentication"],
+        "parameters": [
+          {
+            "name": "provider",
+            "in": "query",
+            "description": "OAuth provider (google, okta, entra, etc.)",
+            "schema": {"type": "string"}
+          }
+        ],
+        "responses": {
+          "302": {
+            "description": "Redirect to OIDC provider"
+          }
+        }
+      }
+    },
+    "/auth/callback": {
+      "get": {
+        "summary": "OAuth Callback",
+        "description": "Handle OIDC callback and exchange code for tokens",
+        "tags": ["Authentication"],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "description": "Authorization code from OIDC provider",
+            "schema": {"type": "string"}
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "description": "State parameter for CSRF protection",
+            "schema": {"type": "string"}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authentication successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "access_token": {"type": "string"},
+                    "token_type": {"type": "string"},
+                    "expires_in": {"type": "integer"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/user": {
+      "get": {
+        "summary": "Get User Info",
+        "description": "Get current user information from JWT token",
+        "tags": ["Authentication"],
+        "security": [{"BearerAuth": []}],
+        "responses": {
+          "200": {
+            "description": "User information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "sub": {"type": "string"},
+                    "email": {"type": "string"},
+                    "name": {"type": "string"},
+                    "roles": {
+                      "type": "array",
+                      "items": {"type": "string"}
+                    },
+                    "groups": {
+                      "type": "array",
+                      "items": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {"type": "string"},
+          "message": {"type": "string"},
+          "status_code": {"type": "integer"}
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "System",
+      "description": "System health and status endpoints"
+    },
+    {
+      "name": "Configuration",
+      "description": "Tenant and plan configuration management"
+    },
+    {
+      "name": "Backups",
+      "description": "Backup management and rotation"
+    },
+    {
+      "name": "Files",
+      "description": "File operations and routing"
+    },
+    {
+      "name": "Operations",
+      "description": "Operation logging and monitoring"
+    },
+    {
+      "name": "Authentication",
+      "description": "OIDC/OAuth2 authentication endpoints"
+    }
+  ]
+}

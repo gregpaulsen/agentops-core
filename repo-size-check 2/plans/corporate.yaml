@@ -1,0 +1,22 @@
+plan_id: corporate
+name: Corporate (Enterprise)
+feature_flags:
+  ENABLE_SSO: true
+  ENABLE_AUDIT_LOG: true
+  ENABLE_SCIM: true
+  ENABLE_DLP: true
+  ENABLE_RATE_LIMITS: true
+  ENABLE_DASHBOARDS_PRO: true
+  ENABLE_MANAGED_SERVICES: true
+limits:
+  MAX_USERS: 10000
+  MAX_STORAGE_GB: 10000
+  MAX_API_QPS: 2000
+  MAX_AI_TOKENS_PER_DAY: 5000000
+compliance:
+  SOC2_MODE: true
+  PII_MASKING: true
+  DATA_RESIDENCY: true
+defaults:
+  STORAGE_PROVIDER: s3
+  OIDC_SCOPES: "openid profile email offline_access"

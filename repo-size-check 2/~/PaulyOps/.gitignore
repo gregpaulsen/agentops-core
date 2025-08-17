@@ -1,0 +1,107 @@
+# PaulyOps .gitignore
+# Excludes sensitive files, build artifacts, and temporary files
+
+# Environment and Configuration
+.env
+*.env
+.env.*
+config/.env
+config/*.env
+
+# Credentials and Secrets
+*credential*
+*token*
+*secret*
+*password*
+*.key
+*.pem
+*.p12
+
+# Logs and Reports
+logs/
+Reports/
+*.log
+*.md
+!README.md
+!VERSION.md
+!SOC2_READINESS.md
+
+# Backups
+Backups/
+*.zip
+*.tar
+*.gz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node.js (UI)
+ui/node_modules/
+ui/.npm
+ui/.eslintcache
+ui/coverage/
+ui/.nyc_output
+ui/.env.local
+ui/.env.development.local
+ui/.env.test.local
+ui/.env.production.local
+ui/dist/
+ui/build/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Temporary Files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# LaunchAgents
+*.plist
+
+# Test Files
+test_*.zip
+test_*.py
+*_test.py
+
+# Auto-generated
+*.generated
+*.auto

@@ -1,0 +1,8 @@
+This is a sample document for testing the PaulyOps ingest system.
+
+It contains:
+- Plain text content
+- Multiple lines
+- Special characters: !@#$%^&*()
+
+This file should be processed by the router and moved to the appropriate storage location.

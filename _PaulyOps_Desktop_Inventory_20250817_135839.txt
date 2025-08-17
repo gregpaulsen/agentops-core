@@ -1,0 +1,304 @@
+User/OS:
+gregpaulsen
+ProductName:		macOS
+ProductVersion:		26.0
+BuildVersion:		25A5338b
+
+=== DESKTOP (level 1) ===
+total 40
+-rw-r--r--@  1 gregpaulsen  staff    848 Aug 17 13:57 _PaulyOps_Desktop_Inventory_20250817_135721.txt
+-rw-r--r--   1 gregpaulsen  staff    114 Aug 17 13:58 _PaulyOps_Desktop_Inventory_20250817_135839.txt
+drwx------@ 11 gregpaulsen  staff    352 Aug 17 13:58 .
+drwxr-x---+ 40 gregpaulsen  staff   1280 Aug 17 13:56 ..
+-rw-r--r--@  1 gregpaulsen  staff  10244 Aug 17 13:57 .DS_Store
+drwx------@ 12 gregpaulsen  staff    384 Aug 17 13:58 .tmp.driveupload
+drwx------   3 gregpaulsen  staff     96 Aug 14 20:19 BigSkyAg
+drwx------   5 gregpaulsen  staff    160 Aug 17 10:44 GregsDocs
+drwx------   2 gregpaulsen  staff     64 Aug 17 10:49 Jack_Ai
+drwx------  12 gregpaulsen  staff    384 Aug 17 13:52 PaulyOps_Main
+drwx------   3 gregpaulsen  staff     96 Aug 17 13:51 PaulyOpsDropzone
+
+=== Candidate PaulyOps folders on Desktop ===
+/Users/gregpaulsen/Desktop/PaulyOps_Main
+/Users/gregpaulsen/Desktop/PaulyOps_Main/apps/ui/paulyops-ui
+/Users/gregpaulsen/Desktop/PaulyOps_Main/PaulyOps Shortcuts
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/~/Desktop/PaulyOps Shortcuts
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/~/PaulyOps
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/~/PaulyOps
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/Desktop/PaulyOps
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/PaulyOps
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui
+/Users/gregpaulsen/Desktop/PaulyOpsDropzone
+
+=== SELECTED PaulyOps folder ===
+Path: /Users/gregpaulsen/Desktop/PaulyOps_Main
+
+--- Top-level inside PaulyOps (depth 1) ---
+total 32
+drwxr-xr-x@  4 gregpaulsen  staff    128 Aug 17 13:51 _PAULYOPS_CLEANUP_BACKUP_20250817_110353
+drwxr-xr-x@  4 gregpaulsen  staff    128 Aug 17 13:51 _PaulyOpsWorkspace
+drwx------  12 gregpaulsen  staff    384 Aug 17 13:52 .
+drwx------@ 12 gregpaulsen  staff    384 Aug 17 13:58 ..
+-rw-r--r--@  1 gregpaulsen  staff  14340 Aug 17 13:57 .DS_Store
+drwx------   4 gregpaulsen  staff    128 Aug 17 10:44 apps
+drwx------   3 gregpaulsen  staff     96 Aug 17 13:52 EnterpriseSystem
+drwx------@  8 gregpaulsen  staff    256 Aug 17 13:51 PaulyOps Shortcuts
+-rw-------   1 gregpaulsen  staff   8596 Aug 15 12:15 process_dropzone_simple.py
+drwx------  13 gregpaulsen  staff    416 Aug 17 13:51 repo-size-check
+drwx------@ 47 gregpaulsen  staff   1504 Aug 17 13:51 repo-size-check 2
+drwx------   7 gregpaulsen  staff    224 Aug 17 13:51 Reports
+
+--- Two-level directory view (depth 2) ---
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PAULYOPS_CLEANUP_BACKUP_20250817_110353
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/_PAULYOPS_CLEANUP_BACKUP_20250817_110353/repos
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical
+/Users/gregpaulsen/Desktop/PaulyOps_Main/apps
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/apps/ui
+/Users/gregpaulsen/Desktop/PaulyOps_Main/EnterpriseSystem
+/Users/gregpaulsen/Desktop/PaulyOps_Main/PaulyOps Shortcuts
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/~
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/Desktop
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/docs
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/docs 2
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/PaulyOps
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/ui
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/__pycache__
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/~
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/00_Admin
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/api
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/auth
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/bigsky-agent
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/BigSkyAgDropzone
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/compliance
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/config
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/dashboards
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/docs
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/logs
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/plans
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/rbac
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/reports
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/scripts
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/server
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/service
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/src
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/tenancy
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/tenants
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/tests
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/ui
+  /Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2/utils
+/Users/gregpaulsen/Desktop/PaulyOps_Main/Reports
+
+--- Any nested Git repos ---
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check 2
+/Users/gregpaulsen/Desktop/PaulyOps_Main/apps/ui/paulyops-ui
+
+--- package.json files (sample up to 200) ---
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/queue-microtask/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/jws/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/tinyglobby/node_modules/picomatch/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/tinyglobby/node_modules/fdir/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/tinyglobby/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/callsites/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@alloc/quick-lru/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/victory-vendor/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/tapable/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/d3-format/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/zod/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/styled-jsx/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/reusify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/simple-swizzle/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/strip-literal/node_modules/js-tokens/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/strip-literal/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/define-data-property/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/is-bigint/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/which-boxed-primitive/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-shape/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/use-sync-external-store/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-array/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/chai/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-scale/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-color/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-timer/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-interpolate/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-time/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/deep-eql/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/react-dom/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/json5/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-path/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/estree/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/node/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/react/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/d3-ease/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@types/json-schema/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/globals/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/d3-shape/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/formdata-polyfill/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/shebang-regex/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/@stripe/stripe-js/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/jwa/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/web-streams-polyfill/ponyfill/es2018/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/web-streams-polyfill/ponyfill/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/web-streams-polyfill/ponyfill/es6/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/web-streams-polyfill/es2018/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/web-streams-polyfill/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/web-streams-polyfill/es6/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/_PaulyOpsWorkspace/canonical/apps/ui/node_modules/functions-have-names/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/Desktop/PaulyOps/installer/electron/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/queue-microtask/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/jws/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/tinyglobby/node_modules/picomatch/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/tinyglobby/node_modules/fdir/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/tinyglobby/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/callsites/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@alloc/quick-lru/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/victory-vendor/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/tapable/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/d3-format/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/use-callback-ref/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/zod/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/styled-jsx/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/reusify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/simple-swizzle/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/strip-literal/node_modules/js-tokens/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/strip-literal/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/define-data-property/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/is-bigint/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/which-boxed-primitive/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-shape/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/use-sync-external-store/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-array/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/chai/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-scale/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-color/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-timer/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-interpolate/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-time/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/deep-eql/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/react-dom/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/json5/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-path/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/estree/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/node/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/react/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/d3-ease/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@types/json-schema/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/globals/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/d3-shape/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/formdata-polyfill/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/shebang-regex/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/@stripe/stripe-js/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/jwa/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/web-streams-polyfill/ponyfill/es2018/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/web-streams-polyfill/ponyfill/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/web-streams-polyfill/ponyfill/es6/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/web-streams-polyfill/es2018/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/web-streams-polyfill/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/web-streams-polyfill/es6/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/functions-have-names/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/is-docker/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/babel-packages/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/zod/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/constants-browserify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/anser/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/browserslist/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/is-wsl/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/webpack-sources3/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/jest-worker/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/stacktrace-parser/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/cli-select/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/tty-browserify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/strip-ansi/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/react-experimental/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/content-type/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/async-sema/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/react-is/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/content-disposition/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/web-vitals/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/vm-browserify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/lru-cache/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/sass-loader/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/commander/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/punycode/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/ci-info/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/loader-utils3/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/text-table/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/react-server-dom-turbopack-experimental/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/bytes/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/util/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@opentelemetry/api/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/watchpack/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/nanoid/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/loader-utils2/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/string-hash/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/acorn/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/regenerator-runtime/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/timers-browserify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/browserify-zlib/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/react-server-dom-turbopack/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/ignore-loader/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/unistore/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/string_decoder/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/superstruct/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/icss-utils/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/picomatch/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/comment-json/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/stream-http/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/postcss-scss/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@ampproject/toolbox-optimizer/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/ora/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/jsonwebtoken/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/fresh/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/path-browserify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/setimmediate/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/querystring-es3/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/scheduler/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/os-browserify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/postcss-preset-env/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/path-to-regexp/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/p-limit/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/server-only/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/react-refresh/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/find-up/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/assert/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/postcss-modules-local-by-default/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/react-server-dom-webpack-experimental/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/postcss-modules-values/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@mswjs/interceptors/ClientRequest/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/crypto-browserify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/lodash.curry/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/stream-browserify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/gzip-size/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/react-dom/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/webpack/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/babel/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/webpack-sources1/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@napi-rs/triples/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/raw-body/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/semver/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/postcss-value-parser/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/safe-stable-stringify/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/postcss-modules-scope/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@edge-runtime/ponyfill/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@edge-runtime/primitives/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@edge-runtime/cookies/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/zod-validation-error/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/react-server-dom-webpack/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/client-only/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@babel/runtime/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/@babel/runtime/helpers/esm/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/shell-quote/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/image-size/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/compression/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/json5/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/postcss-modules-extract-imports/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/cross-spawn/package.json
+/Users/gregpaulsen/Desktop/PaulyOps_Main/repo-size-check/paulyops-ui/node_modules/next/dist/compiled/ua-parser-js/package.json
+
+--- Root marker (if present) ---
+(no .paulyops-root.json found)

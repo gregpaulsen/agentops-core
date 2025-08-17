@@ -1,0 +1,49 @@
+{
+  "name": "PaulyOps Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "pip install -U pip && pip install -r requirements.txt && pre-commit install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-azuretools.vscode-docker",
+        "GitHub.vscode-pull-request-github",
+        "mhutchie.git-graph",
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.testing.pytestEnabled": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "files.exclude": {
+          "**/00_Admin/Backups": true,
+          "**/.venv": true,
+          "**/__pycache__": true,
+          "**/.pytest_cache": true,
+          "**/build": true,
+          "**/dist": true
+        }
+      }
+    }
+  },
+  "mounts": [],
+  "runArgs": []
+}
