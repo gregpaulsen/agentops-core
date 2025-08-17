@@ -1,0 +1,16 @@
+# Dependencies / builds
+node_modules/
+.venv/
+dist/
+build/
+.next/
+coverage/
+# Editors / OS
+.DS_Store
+*.log
+# Local artifacts
+*.zip
+*.mp4
+*.mov
+*.psd
+*.tif
