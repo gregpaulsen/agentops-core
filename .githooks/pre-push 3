@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# 1) Block direct pushes to main unless explicitly allowed
+branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")"
+if [ "$branch" = "main" ] && [ "${ALLOW_MAIN:-0}" != "1" ]; then
+  echo "❌ Direct push to main blocked. Open a PR or set ALLOW_MAIN=1 to override." >&2
+  exit 1
+fi
+
+# 2) Guard against >100MB files that are NOT tracked by LFS
+limit=$((100*1024*1024)); bad=0
+while IFS= read -r -d '' f; do
+  [ -f "$f" ] || continue
+  size=$(wc -c <"$f")
+  if [ "$size" -gt "$limit" ] && ! git check-attr -a -- "$f" | grep -q 'filter: lfs'; then
+    echo "❌ >100MB tracked file: $f ($((size/1024/1024))MB). Use Git LFS or move to storage/." >&2
+    bad=1
+  fi
+done < <(git ls-files -z)
+if [ "$bad" -ne 0 ]; then
+  exit 1
+fi
+
+# 3) Chain to Git LFS's own pre-push hook (uploads LFS objects)
+lfs_rc=0
+if git lfs version >/dev/null 2>&1; then
+  git lfs pre-push "$@" || lfs_rc=$?
+fi
+
+exit "$lfs_rc"
