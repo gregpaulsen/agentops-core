@@ -1,81 +1,58 @@
-# PaulyOps Git Ignore
-
-# Large files and backups
-*.zip
-*.tar.gz
-*.tar
-*.gz
-*.7z
-*.rar
-
-# Node modules and build artifacts
+# --- Node / JS ---
 node_modules/
+.npm/
+.pnpm-store/
+.next/
 dist/
 build/
-.next/
-out/
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Logs and temporary files
+coverage/
 *.log
-*.tmp
-*.temp
-logs/
-temp/
 
-# OS files
+# --- Python ---
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# --- OS / Editor ---
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# IDE
+.Turbo
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
 
-# Environment files
-.env
-.env.local
-.env.*.local
-
-# Backup directories
-Backups/
-Backups_*/
-archive*/
-_PAULYOPS_CLEANUP_BACKUP_*/
-
-# Large binary files
-*.node
+# --- Artifacts / Archives / Binaries (keep repo small) ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.dmg
+*.pkg
+*.iso
+*.img
+*.bin
+*.exe
 *.dll
 *.so
-*.dylib
+*.node
+*.tif
+*.tiff
+*.psd
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.flac
+*.onnx
+*.pth
 
-# Reports and logs (keep structure, ignore content)
-Reports/*.log
-Reports/*.txt
-Reports/.nightly_last_sent
-Reports/.backup_*
-Reports/.router_disabled
-Reports/.autodoctor_log_*
+# --- App outputs ---
+/reports/*.html
+/reports/*.pdf
 
-# Legacy and cleanup
-_PaulyOpsWorkspace/
-EnterpriseSystem/
+# --- Local env files (example below) ---
+.env
