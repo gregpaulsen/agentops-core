@@ -1,16 +1,81 @@
-# Dependencies / builds
+# PaulyOps Git Ignore
+
+# Large files and backups
+*.zip
+*.tar.gz
+*.tar
+*.gz
+*.7z
+*.rar
+
+# Node modules and build artifacts
 node_modules/
-.venv/
 dist/
 build/
 .next/
-coverage/
-# Editors / OS
-.DS_Store
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs and temporary files
 *.log
-# Local artifacts
-*.zip
-*.mp4
-*.mov
-*.psd
-*.tif
+*.tmp
+*.temp
+logs/
+temp/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Backup directories
+Backups/
+Backups_*/
+archive*/
+_PAULYOPS_CLEANUP_BACKUP_*/
+
+# Large binary files
+*.node
+*.dll
+*.so
+*.dylib
+
+# Reports and logs (keep structure, ignore content)
+Reports/*.log
+Reports/*.txt
+Reports/.nightly_last_sent
+Reports/.backup_*
+Reports/.router_disabled
+Reports/.autodoctor_log_*
+
+# Legacy and cleanup
+_PaulyOpsWorkspace/
+EnterpriseSystem/

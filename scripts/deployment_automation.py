@@ -450,7 +450,7 @@ For support, see README.md in the installation directory.
         report.append("")
         
         report.append("## 📁 Installation Structure")
-        report.append("```
+        report.append("""
         ~/PaulyOps/
         ├── scripts/          # Core automation scripts
         ├── config/           # Configuration files
@@ -460,7 +460,7 @@ For support, see README.md in the installation directory.
         
         ~/Desktop/
         └── PaulyOps Shortcuts/  # Desktop launchers
-        ```")
+        """)
         report.append("")
         
         report.append("## ✅ Post-Installation Checklist")
