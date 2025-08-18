@@ -1,0 +1,54 @@
+#!/bin/zsh
+
+echo "🔧 Starting Big Sky code patch..."
+
+UTILS_PATH="$HOME/Desktop/Coding_Commands/bigsky_path_utils.py"
+TARGET_DIR="$HOME/Desktop/Coding_Commands"
+
+# Loop over all .py files except the utils file
+for FILE in "$TARGET_DIR"/*.py(.N); do
+  [[ "$FILE" == "$UTILS_PATH" ]] && continue
+
+  echo "📄 Patching: $FILE"
+
+  # Backup
+  python3 -c "from bigsky_path_utils import backup_script; from pathlib import Path; backup_script(Path('$FILE'))"
+
+  # Replace hardcoded /Volumes/BigSkySSD with dynamic finder
+  sed -i '' 's#/Volumes/BigSky[^/]*/BigSkyAg#get_bigsky_subfolder("")#g' "$FILE"
+  sed -i '' '1s/^/from bigsky_path_utils import get_bigsky_subfolder, find_bigsky_root\n/' "$FILE"
+
+done
+
+echo "✅ Python files patched."
+
+# Now patch .command files
+for FILE in "$TARGET_DIR"/*.command(.N); do
+  echo "📄 Checking: $FILE"
+
+  if grep -q "/Volumes/BigSky" "$FILE"; then
+    echo "🔁 Patching: $FILE"
+    cp "$FILE" "$FILE.bak"
+
+    sed -i '' 's#/Volumes/BigSky[^/]*/BigSkyAg#$BIGSKY_PATH#g' "$FILE"
+
+    cat << 'PATCH' | tee "$FILE.tmp" > /dev/null
+#!/bin/zsh
+
+BIGSKY_PATH=$(find /Volumes -maxdepth 2 -type d -name "BigSkyAg" -exec test -d "{}/00_Admin" \; -print | head -n 1)
+
+if [[ -z "$BIGSKY_PATH" ]]; then
+  echo "❌ BigSkyAg drive not found or missing folders."
+  exit 1
+fi
+
+PATCH
+
+    tail -n +2 "$FILE" >> "$FILE.tmp"
+    mv "$FILE.tmp" "$FILE"
+    chmod +x "$FILE"
+    echo "✅ Patched and made executable: $FILE"
+  fi
+done
+
+echo "🧹 All relevant .command and .py files are now patched and future-proofed."

@@ -1,0 +1,58 @@
+[2025-08-14T19:53:18] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T19:53:18] folder: created /Users/gregpaulsen/PaulyOps/Backups/archive
+[2025-08-14T19:53:18] rotation: moved 'test_backup_1.zip' -> archive/
+[2025-08-14T19:53:18] rotation: moved 'test_backup_2.zip' -> archive/
+[2025-08-14T19:53:18] rotation: created success marker
+[2025-08-14T19:53:18] launchd: com.bigsky.nightlyreport is valid
+[2025-08-14T19:53:18] router: disabled (flag)
+[2025-08-14T19:53:18] router: created disabled marker
+[2025-08-14T19:53:18] endpoints: disabled (flag)
+[2025-08-14T19:53:18] 🎉 Auto-Doctor complete!
+[2025-08-14T19:54:06] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T19:54:06] rotation: no action needed (1 or fewer backups)
+[2025-08-14T19:54:06] launchd: com.bigsky.nightlyreport is valid
+[2025-08-14T19:54:06] router: disabled (flag)
+[2025-08-14T19:54:06] endpoints: disabled (flag)
+[2025-08-14T19:54:06] 🎉 Auto-Doctor complete!
+[2025-08-14T20:00:58] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T20:00:58] rotation: no action needed (1 or fewer backups)
+[2025-08-14T20:00:58] launchd: com.bigsky.nightlyreport is valid
+[2025-08-14T20:00:58] router: disabled (flag)
+[2025-08-14T20:00:58] endpoints: disabled (flag)
+[2025-08-14T20:00:58] 🎉 Auto-Doctor complete!
+[2025-08-14T20:09:25] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T20:09:25] rotation: no action needed (1 or fewer backups)
+[2025-08-14T20:09:25] launchd: com.paulyops.nightlyreport is valid
+[2025-08-14T20:09:25] router: disabled (flag)
+[2025-08-14T20:09:25] endpoints: disabled (flag)
+[2025-08-14T20:09:25] 🎉 Auto-Doctor complete!
+[2025-08-14T20:33:50] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T20:33:50] rotation: no action needed (1 or fewer backups)
+[2025-08-14T20:33:51] launchd: com.paulyops.nightlyreport is valid
+[2025-08-14T20:33:51] router: disabled (flag)
+[2025-08-14T20:33:51] endpoints: disabled (flag)
+[2025-08-14T20:33:51] 🎉 Auto-Doctor complete!
+[2025-08-14T21:08:04] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T21:08:04] rotation: no action needed (1 or fewer backups)
+[2025-08-14T21:08:04] launchd: com.paulyops.nightlyreport is valid
+[2025-08-14T21:08:04] router: disabled (flag)
+[2025-08-14T21:08:04] endpoints: disabled (flag)
+[2025-08-14T21:08:04] 🎉 Auto-Doctor complete!
+[2025-08-14T21:14:04] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T21:14:04] rotation: no action needed (1 or fewer backups)
+[2025-08-14T21:14:04] launchd: com.paulyops.nightlyreport is valid
+[2025-08-14T21:14:04] router: disabled (flag)
+[2025-08-14T21:14:04] endpoints: disabled (flag)
+[2025-08-14T21:14:04] 🎉 Auto-Doctor complete!
+[2025-08-14T23:20:40] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T23:20:40] rotation: no action needed (1 or fewer backups)
+[2025-08-14T23:20:40] launchd: com.paulyops.nightlyreport is valid
+[2025-08-14T23:20:40] router: disabled (flag)
+[2025-08-14T23:20:40] endpoints: disabled (flag)
+[2025-08-14T23:20:40] 🎉 Auto-Doctor complete!
+[2025-08-14T23:26:25] 🚀 Starting Auto-Doctor self-healing checks...
+[2025-08-14T23:26:25] rotation: no action needed (1 or fewer backups)
+[2025-08-14T23:26:25] launchd: com.paulyops.nightlyreport is valid
+[2025-08-14T23:26:25] router: disabled (flag)
+[2025-08-14T23:26:25] endpoints: disabled (flag)
+[2025-08-14T23:26:25] 🎉 Auto-Doctor complete!

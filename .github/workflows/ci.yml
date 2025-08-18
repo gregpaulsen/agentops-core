@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  sanity:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { lfs: true }
+      - name: Ensure no huge tracked files (>100MB) outside LFS
+        run: |
+          bad=0
+          while IFS= read -r -d '' f; do
+            [ -f "$f" ] || continue
+            sz=$(wc -c <"$f")
+            if [ "$sz" -gt $((100*1024*1024)) ]; then
+              if ! git check-attr -a -- "$f" | grep -q 'filter: lfs'; then
+                echo "Found >100MB non-LFS file: $f ($((sz/1024/1024))MB)"; bad=1
+              fi
+            fi
+            exit $bad
+          done < <(git ls-files -z)
+      - name: Python 3.x
+        uses: actions/setup-python@v5
+        with: { python-version: '3.x' }
+      - name: Python compile smoke
+        run: |
+          find . -name "*.py" -not -path "./.venv/*" -not -path "./node_modules/*" -exec python -m py_compile {} \;
+      - name: Repo health script (if present)
+        run: |
+          if [ -x scripts/health.sh ]; then ./scripts/health.sh || true; fi
