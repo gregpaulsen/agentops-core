@@ -1,0 +1,268 @@
+openapi: 3.0.3
+info:
+  title: PaulyOps API
+  description: Secure backend API for PaulyOps with SOC2 compliance
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Development server
+  - url: https://api.paulyops.com
+    description: Production server
+
+security:
+  - bearerAuth: []
+  - cookieAuth: []
+
+paths:
+  /api/health:
+    get:
+      summary: Health check endpoint
+      description: Returns system health status
+      responses:
+        '200':
+          description: System is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+                  time:
+                    type: string
+                    format: date-time
+                  db:
+                    type: string
+                    enum: [up, down]
+                    example: up
+
+  /api/incident/report:
+    post:
+      summary: Report an incident
+      description: Log an incident with severity and context
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+                - severity
+              properties:
+                message:
+                  type: string
+                  description: Incident description
+                severity:
+                  type: string
+                  enum: [low, medium, high, critical]
+                context:
+                  type: object
+                  description: Additional context data
+      responses:
+        '200':
+          description: Incident reported successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: Incident ID
+                  status:
+                    type: string
+                    example: reported
+        '401':
+          description: Unauthorized
+        '400':
+          description: Bad request
+
+  /api/telemetry/event:
+    post:
+      summary: Log telemetry event
+      description: Record a telemetry event for analytics
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - type
+              properties:
+                type:
+                  type: string
+                  description: Event type (e.g., digest.rendered, action.clicked)
+                payload:
+                  type: object
+                  description: Event payload data
+      responses:
+        '200':
+          description: Event logged successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: Event ID
+                  status:
+                    type: string
+                    example: logged
+        '401':
+          description: Unauthorized
+        '400':
+          description: Bad request
+
+  /api/digest/render:
+    post:
+      summary: Render digest
+      description: Generate a digest summary for the specified days
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - days
+              properties:
+                days:
+                  type: integer
+                  minimum: 1
+                  maximum: 30
+                  description: Number of days to include in digest
+      responses:
+        '200':
+          description: Digest rendered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  summary:
+                    type: string
+                    description: Digest summary
+                  messageCount:
+                    type: integer
+                    description: Number of messages processed
+        '401':
+          description: Unauthorized
+        '400':
+          description: Bad request
+
+  /api/inbox/action:
+    post:
+      summary: Perform inbox action
+      description: Execute an action on selected messages
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - action
+                - messageIds
+              properties:
+                action:
+                  type: string
+                  enum: [archive, route, snooze]
+                  description: Action to perform
+                messageIds:
+                  type: array
+                  items:
+                    type: string
+                  description: Array of message IDs to act upon
+      responses:
+        '200':
+          description: Action completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  processed:
+                    type: integer
+                    description: Number of messages processed
+                  status:
+                    type: string
+                    example: completed
+        '401':
+          description: Unauthorized
+        '400':
+          description: Bad request
+
+  /api/ndvi/jobs:
+    post:
+      summary: Create NDVI job
+      description: Submit a new NDVI processing job
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - source
+              properties:
+                source:
+                  type: string
+                  enum: [upload, gdrive]
+                  description: Data source type
+                acres:
+                  type: number
+                  minimum: 0
+                  description: Number of acres to process
+      responses:
+        '200':
+          description: Job created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobId:
+                    type: string
+                    description: Unique job identifier
+                  status:
+                    type: string
+                    enum: [pending, processing, completed, failed]
+                    example: pending
+                  retryCount:
+                    type: integer
+                    minimum: 0
+                    example: 0
+        '401':
+          description: Unauthorized
+        '400':
+          description: Bad request
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: next-auth.session-token

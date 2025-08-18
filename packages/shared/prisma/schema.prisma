@@ -1,0 +1,64 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Organization {
+  id        String   @id @default(cuid())
+  name      String
+  users     User[]
+  auditLogs AuditLog[]
+  telemetryEvents TelemetryEvent[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  name          String?
+  orgId         String
+  organization  Organization @relation(fields: [orgId], references: [id])
+  role          String   @default("user") // "user" | "admin" | "owner"
+  auditLogs     AuditLog[]
+  telemetryEvents TelemetryEvent[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([orgId])
+  @@index([email])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  orgId     String
+  userId    String?
+  action    String
+  entity    String?
+  entityId  String?
+  metadata  Json?
+  organization Organization @relation(fields: [orgId], references: [id])
+  user      User?    @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+
+  @@index([orgId, createdAt])
+  @@index([action])
+}
+
+model TelemetryEvent {
+  id        String   @id @default(cuid())
+  orgId     String
+  userId    String?
+  type      String   // e.g., "digest.rendered", "action.clicked", "upload.started"
+  payload   Json?
+  organization Organization @relation(fields: [orgId], references: [id])
+  user      User?    @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+
+  @@index([orgId, type, createdAt])
+  @@index([type])
+}

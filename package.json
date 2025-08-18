@@ -1,0 +1,20 @@
+{
+  "name": "paulyops",
+  "version": "1.0.0",
+  "description": "PaulyOps Backend with SOC2 Compliance",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @paulyops/api dev",
+    "build": "pnpm --filter @paulyops/shared build && pnpm --filter @paulyops/api build",
+    "lint": "pnpm --filter @paulyops/api lint",
+    "test": "pnpm --filter @paulyops/api test",
+    "prisma:generate": "pnpm --filter @paulyops/shared prisma:generate",
+    "prisma:migrate": "pnpm --filter @paulyops/shared prisma:migrate",
+    "prisma:studio": "pnpm --filter @paulyops/shared prisma:studio",
+    "openapi:generate": "pnpm dlx openapi-typescript openapi/openapi.yaml -o packages/schemas/src/openapi-types.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}
