@@ -1,4 +1,4 @@
-# --- Node / JS ---
+# Node / JS
 node_modules/
 .npm/
 .pnpm-store/
@@ -8,21 +8,22 @@ build/
 coverage/
 *.log
 
-# --- Python ---
+# Python
 .venv/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 .pytest_cache/
 
-# --- OS / Editor ---
+# OS / Editor
 .DS_Store
-.Turbo
 .vscode/
 .idea/
 
-# --- Artifacts / Archives / Binaries (keep repo small) ---
+# Local runtime
+logs/
+tmp/
+
+# Archives / Binaries (we'll use LFS if truly needed)
 *.zip
 *.tar
 *.tar.gz
@@ -34,25 +35,16 @@ __pycache__/
 *.iso
 *.img
 *.bin
-*.exe
 *.dll
 *.so
 *.node
-*.tif
-*.tiff
-*.psd
 *.mp4
 *.mov
 *.avi
 *.mkv
 *.wav
 *.flac
+*.tif
+*.tiff
 *.onnx
 *.pth
-
-# --- App outputs ---
-/reports/*.html
-/reports/*.pdf
-
-# --- Local env files (example below) ---
-.env
