@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+MAX=$((50*1024*1024))
+blocked=0
+while IFS= read -r -d '' path; do
+  [ -f "$path" ] || continue
+  size=$(wc -c <"$path")
+  if [ "$size" -gt "$MAX" ]; then
+    if git check-attr -a -- "$path" | grep -q 'filter: lfs'; then
+      continue
+    fi
+    echo "❌ Blocked >50MB file: $path ($((size/1024/1024))MB). Use Git LFS or move to storage/." >&2
+    blocked=1
+  fi
+done < <(git diff --cached --name-only -z)
+exit $blocked

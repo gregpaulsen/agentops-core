@@ -48,3 +48,8 @@ tmp/
 *.tiff
 *.onnx
 *.pth
+
+# Local storage (kept out of Git)
+storage/*
+!storage/**/*.manifest.json
+!storage/**/.keep
