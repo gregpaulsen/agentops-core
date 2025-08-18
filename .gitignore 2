@@ -1,0 +1,55 @@
+# Node / JS
+node_modules/
+.npm/
+.pnpm-store/
+.next/
+dist/
+build/
+coverage/
+*.log
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Local runtime
+logs/
+tmp/
+
+# Archives / Binaries (we'll use LFS if truly needed)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.dmg
+*.pkg
+*.iso
+*.img
+*.bin
+*.dll
+*.so
+*.node
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.flac
+*.tif
+*.tiff
+*.onnx
+*.pth
+
+# Local storage (kept out of Git)
+storage/*
+!storage/**/*.manifest.json
+!storage/**/.keep
