@@ -1,0 +1,40 @@
+🧠 AgentOps Command Index (BigSkyAg + Core)
+
+────────────────────────────
+
+🔁 toggle_backup_job.command  
+→ Toggles the BigSkyAg 10PM auto-backup launchd job ON or OFF.
+
+📦 run_bigsky_backup.command  
+→ Triggers the BigSkyAg backup script manually (uses create_backup_zip_cleaned.py).
+
+📦 run_gregops_backup.command  
+→ Triggers the backup for GregOps project (separate logic from BigSkyAg).
+
+🧹 clean_my_mac.command  
+→ Clears system clutter, caches, and performance-draining files.
+
+🧼 clean_terminal.command  
+→ Clears terminal history and resets to a clean prompt.
+
+📂 open_dev_folder.command  
+→ Opens your development folder in Finder.
+
+📂 open_dropzone.command  
+→ Opens the BigSkyAg DropZone folder to quickly view incoming files.
+
+🔧 patch_bigsky_paths.command  
+→ Rewrites any hardcoded BigSkyAg file paths to match current system layout.
+
+🚀 run_all_preflight.command  
+→ Runs all pre-coding checks and prep scripts before starting dev work.
+
+🩺 run_system_check.command  
+→ Runs key health checks across folders, backup status, and sync integrity.
+
+
+🧭 start_dev_day.command  
+→ Launchpad for your dev day: opens all tools, folders, and terminal windows.
+
+───────────────
+

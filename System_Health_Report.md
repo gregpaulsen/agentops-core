@@ -1,0 +1,58 @@
+# PaulyOps Enhanced System Health Report
+
+**Generated**: 2025-08-14 21:45:49  
+**Environment**: development  
+**Storage Provider**: local
+
+## Summary
+
+- ✅ **Successes**: 15
+- ⚠️  **Warnings**: 1
+- ❌ **Issues**: 0
+
+## System Status
+
+| Component | Status | Details |
+|-----------|--------|---------|
+| PaulyOpsDropzone | ✅ PASS | Found 1 files, latest: test_file.txt (0.4h ago) |
+| Backup Creation | ✅ PASS | Backup created successfully (0.4h ago) |
+| Backup Rotation | ✅ PASS | Backup rotation completed (1.9h ago) |
+| Backup Files | ✅ PASS | Found 1 active backup(s), latest: PaulyOps_Backup_2025-08-14.zip (0.4h ago, 698.8MB) |
+| Archive Directory | ✅ PASS | Found 2 archived backups |
+| Log Files | ✅ PASS | Found 5 logs, latest: errors_2025-08-14.log (8.6h ago, 0.0MB) |
+| Launchd Job | ✅ PASS | com.bigsky.uploadweekly: Job is loaded and running |
+| Launchd Job | ✅ PASS | com.bigsky.drivemirror: Job is loaded and running |
+| Launchd Job | ✅ PASS | com.bigsky.nightlyreport: Job is loaded and running |
+| Launchd Job | ✅ PASS | com.paulyops.nightlyreport: Job is loaded and running |
+| Provider Credentials | ✅ PASS | Found credentials at /Users/gregpaulsen/.config/bigsky/credentials.json |
+| Git Commits | ✅ PASS | Last commit: b90d22badf9cdc9f0ab9ae73ce0e6f0a7ef050a9 feat: add working FastAPI with multi-tenant endpoints 2 days ago |
+| Git Remote | ✅ PASS | Remote configured |
+| Spotlight | ✅ PASS | Spotlight indexing enabled |
+| Nightly Email Sent | ✅ PASS | Last sent 0.1 hours ago |
+|  Git Status | ⚠️ WARN | Uncommitted changes: 80 files |
+
+## Detailed Results
+
+### ✅ Successes
+- ✅ PaulyOpsDropzone: Found 1 files, latest: test_file.txt (0.4h ago)
+- ✅ Backup Creation: Backup created successfully (0.4h ago)
+- ✅ Backup Rotation: Backup rotation completed (1.9h ago)
+- ✅ Backup Files: Found 1 active backup(s), latest: PaulyOps_Backup_2025-08-14.zip (0.4h ago, 698.8MB)
+- ✅ Archive Directory: Found 2 archived backups
+- ✅ Log Files: Found 5 logs, latest: errors_2025-08-14.log (8.6h ago, 0.0MB)
+- ✅ Launchd Job: com.bigsky.uploadweekly: Job is loaded and running
+- ✅ Launchd Job: com.bigsky.drivemirror: Job is loaded and running
+- ✅ Launchd Job: com.bigsky.nightlyreport: Job is loaded and running
+- ✅ Launchd Job: com.paulyops.nightlyreport: Job is loaded and running
+- ✅ Provider Credentials: Found credentials at /Users/gregpaulsen/.config/bigsky/credentials.json
+- ✅ Git Commits: Last commit: b90d22badf9cdc9f0ab9ae73ce0e6f0a7ef050a9 feat: add working FastAPI with multi-tenant endpoints 2 days ago
+- ✅ Git Remote: Remote configured
+- ✅ Spotlight: Spotlight indexing enabled
+- ✅ Nightly Email Sent: Last sent 0.1 hours ago
+
+### ⚠️  Warnings
+- ⚠️  Git Status: Uncommitted changes: 80 files
+
+## Recommendations
+**Warning**: Address warnings for optimal operation.
+

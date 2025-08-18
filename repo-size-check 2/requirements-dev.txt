@@ -1,6 +1,0 @@
-# Development tools
-pytest
-ruff
-black
-isort
-pre-commit

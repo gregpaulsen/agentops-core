@@ -1,9 +1,9 @@
-# Nightly Update Report — 2025-08-14 13:07:02
+# Nightly Update Report — 2025-08-13 17:31:08
 _Host: Gregs-MacBook-Air.local_
 
 ## Backups
-- Latest: ✅ BigSkyAg_Backup_2025-08-13.zip — 698.8 MB — 19.5h old
-- Rotation: ❌ Active backups: 2 (expect 1), Archive entries: 2
+- Latest: ✅ BigSkyAg_Backup_2025-08-13.zip — 158.2 GB — 0.0h old
+- Rotation: ❌ Active backups: 6 (expect 1), Archive entries: 0
 - Uploads: ❌ No recent success markers
 
 ## Router
@@ -16,7 +16,7 @@ _Host: Gregs-MacBook-Air.local_
 - /Volumes/BigSkyAgSSD/BigSkyAg: 0 commits in 24h; push seen: no
 - /Volumes/BigSkyAgSSD/PaulyOps: not a repo
 - /Volumes/BigSkyAgSSD/agentops-core: not a repo
-- /Users/gregpaulsen/Desktop/repo-size-check: 0 commits in 24h; push seen: no
+- /Users/gregpaulsen/Desktop/repo-size-check: 5 commits in 24h; push seen: no
 
 ## Endpoints
 No endpoints configured
