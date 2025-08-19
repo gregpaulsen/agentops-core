@@ -1,0 +1,20 @@
+{
+  "name": "@paulyops/core",
+  "version": "1.0.0",
+  "description": "Core services and plugin contracts for PaulyOps",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@paulyops/db": "workspace:*",
+    "@paulyops/auth": "workspace:*",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
