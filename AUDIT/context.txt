@@ -1,0 +1,14 @@
+=== OS & TOOL VERSIONS ===
+gregpaulsen
+ProductName:		macOS
+ProductVersion:		26.0
+BuildVersion:		25A5338b
+
+=== NODE & PNPM ===
+v24.5.0
+10.14.0
+
+=== GIT ===
+git version 2.39.5 (Apple Git-154)
+
+=== CONTENTS ===
