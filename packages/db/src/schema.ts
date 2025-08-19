@@ -74,6 +74,19 @@ export const auditLogs = pgTable('audit_logs', {
   timestamp: timestamp('timestamp').defaultNow().notNull(),
 })
 
+// Projects table
+export const projects = pgTable('projects', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: text('name').notNull(),
+  description: text('description'),
+  organizationId: uuid('organization_id').notNull().references(() => organizations.id, { onDelete: 'cascade' }),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  status: text('status').notNull().default('active'), // 'active', 'archived', 'deleted'
+  metadata: jsonb('metadata'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+})
+
 // Telemetry events table
 export const telemetryEvents = pgTable('telemetry_events', {
   id: uuid('id').primaryKey().defaultRandom(),
@@ -100,6 +113,9 @@ export const selectApiKeySchema = createSelectSchema(apiKeys)
 export const insertJobSchema = createInsertSchema(jobs)
 export const selectJobSchema = createSelectSchema(jobs)
 
+export const insertProjectSchema = createInsertSchema(projects)
+export const selectProjectSchema = createSelectSchema(projects)
+
 export const insertAuditLogSchema = createInsertSchema(auditLogs)
 export const selectAuditLogSchema = createSelectSchema(auditLogs)
 
@@ -124,6 +140,9 @@ export type NewJob = typeof jobs.$inferInsert
 
 export type AuditLog = typeof auditLogs.$inferSelect
 export type NewAuditLog = typeof auditLogs.$inferInsert
+
+export type Project = typeof projects.$inferSelect
+export type NewProject = typeof projects.$inferInsert
 
 export type TelemetryEvent = typeof telemetryEvents.$inferSelect
 export type NewTelemetryEvent = typeof telemetryEvents.$inferInsert

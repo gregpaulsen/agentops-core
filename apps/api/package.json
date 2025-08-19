@@ -10,8 +10,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@paulyops/shared": "workspace:*",
+    "@auth/drizzle-adapter": "^1.10.0",
     "@paulyops/doctor": "workspace:*",
+    "@paulyops/shared": "workspace:*",
     "next": "^14.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

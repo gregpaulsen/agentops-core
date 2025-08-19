@@ -1,0 +1,47 @@
+Commands available via "pnpm run":
+  build
+    tsc -b
+  start:google
+    node --loader ts-node/esm google-oauth/index.ts
+  start:supabase
+    node --loader ts-node/esm supabase/index.ts
+  start:figma
+    node --loader ts-node/esm figma/index.ts
+  start:rive
+    node --loader ts-node/esm rive/index.ts
+
+Commands of the root workspace project (to run them, use "pnpm -w run"):
+  dev
+    turbo run dev
+  build
+    turbo run build
+  lint
+    turbo run lint
+  test
+    turbo run test
+  format
+    biome format --write .
+  lint:fix
+    biome lint --write .
+  check
+    biome check .
+  prisma:generate
+    pnpm --filter @paulyops/shared prisma:generate
+  prisma:migrate
+    pnpm --filter @paulyops/shared prisma:migrate
+  prisma:studio
+    pnpm --filter @paulyops/shared prisma:studio
+  openapi:generate
+    pnpm dlx openapi-typescript openapi/openapi.yaml -o packages/schemas/src/openapi-types.ts
+  doctor:scan
+    node packages/doctor/dist/bin/doctor.js scan
+  doctor:repair
+    node packages/doctor/dist/bin/doctor.js repair
+  doctor:surgical
+    node packages/doctor/dist/bin/doctor.js surgical
+  db:generate
+    turbo run db:generate
+  db:migrate
+    turbo run db:migrate
+  clean
+    turbo run clean

@@ -53,3 +53,6 @@ tmp/
 storage/*
 !storage/**/*.manifest.json
 !storage/**/.keep
+
+# env files
+.env*

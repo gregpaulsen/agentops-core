@@ -1,0 +1,30 @@
+{
+  "name": "mcp-servers",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "start:google": "node --loader ts-node/esm google-oauth/index.ts",
+    "start:supabase": "node --loader ts-node/esm supabase/index.ts",
+    "start:figma": "node --loader ts-node/esm figma/index.ts",
+    "start:rive": "node --loader ts-node/esm rive/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.1.0",
+    "@supabase/postgrest-js": "^1.8.6",
+    "@supabase/supabase-js": "^2.45.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "figma-js": "^1.16.0",
+    "node-fetch": "^3.3.2",
+    "open": "^9.1.0",
+    "supabase": "^1.214.10"
+  }
+}
+
+

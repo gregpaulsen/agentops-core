@@ -10,8 +10,9 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@paulyops/db": "workspace:*",
+    "@auth/drizzle-adapter": "^1.10.0",
     "@paulyops/auth": "workspace:*",
+    "@paulyops/db": "workspace:*",
     "zod": "^3.25.76"
   },
   "devDependencies": {

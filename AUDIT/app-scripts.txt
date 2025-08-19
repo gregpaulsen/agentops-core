@@ -1,0 +1,53 @@
+Lifecycle scripts:
+  start
+    next start -p 3000
+
+Commands available via "pnpm run":
+  dev
+    next dev -p 3000
+  build
+    next build
+  lint
+    echo "(lint stub)"
+  db:gen
+    drizzle-kit generate
+  db:migrate
+    drizzle-kit migrate
+  db:studio
+    drizzle-kit studio
+
+Commands of the root workspace project (to run them, use "pnpm -w run"):
+  dev
+    turbo run dev
+  build
+    turbo run build
+  lint
+    turbo run lint
+  test
+    turbo run test
+  format
+    biome format --write .
+  lint:fix
+    biome lint --write .
+  check
+    biome check .
+  prisma:generate
+    pnpm --filter @paulyops/shared prisma:generate
+  prisma:migrate
+    pnpm --filter @paulyops/shared prisma:migrate
+  prisma:studio
+    pnpm --filter @paulyops/shared prisma:studio
+  openapi:generate
+    pnpm dlx openapi-typescript openapi/openapi.yaml -o packages/schemas/src/openapi-types.ts
+  doctor:scan
+    node packages/doctor/dist/bin/doctor.js scan
+  doctor:repair
+    node packages/doctor/dist/bin/doctor.js repair
+  doctor:surgical
+    node packages/doctor/dist/bin/doctor.js surgical
+  db:generate
+    turbo run db:generate
+  db:migrate
+    turbo run db:migrate
+  clean
+    turbo run clean

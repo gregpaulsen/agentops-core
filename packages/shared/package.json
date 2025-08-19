@@ -12,6 +12,7 @@
     "prisma:studio": "prisma studio"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^1.10.0",
     "@prisma/client": "^5.7.0",
     "next-auth": "^4.24.5",
     "pino": "^8.17.2",
