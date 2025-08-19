@@ -34,3 +34,11 @@ export {
   getAvailableProviders,
   type ProviderType 
 } from './lib/providers'
+
+// Permissions
+export * from './permissions/manifest'
+export * from './permissions/scopes'
+export { requireScopes } from './middleware/withPermissions'
+
+// Notifications
+export * from './lib/notify'

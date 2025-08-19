@@ -256,7 +256,175 @@ paths:
         '400':
           description: Bad request
 
-components:
+  /api/doctor/status:
+    get:
+      summary: Get system health status
+      description: Retrieve the current system health status from the doctor
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      responses:
+        '200':
+          description: System status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  lastRun:
+                    type: string
+                    format: date-time
+                    description: Last doctor run timestamp
+                  summary:
+                    type: object
+                    properties:
+                      ok:
+                        type: integer
+                        description: Number of passing checks
+                      warn:
+                        type: integer
+                        description: Number of warning checks
+                      fail:
+                        type: integer
+                        description: Number of failing checks
+                  failingChecks:
+                    type: array
+                    items:
+                      type: string
+                    description: List of failing check names
+                  mode:
+                    type: string
+                    enum: [scan, repair, surgical]
+                    description: Last run mode
+                  timestamp:
+                    type: string
+                    format: date-time
+                    description: Current timestamp
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+
+  /api/doctor/run:
+    post:
+      summary: Run system doctor
+      description: Execute the system doctor with specified mode
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mode:
+                  type: string
+                  enum: [scan, repair, surgical]
+                  default: scan
+                  description: Doctor execution mode
+      responses:
+        '200':
+          description: Doctor run completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  jobId:
+                    type: string
+                    description: Unique job identifier
+                  report:
+                    type: object
+                    description: Complete doctor report
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden (surgical mode not allowed)
+                '500':
+          description: Internal server error
+
+  /api/audit/latest:
+    get:
+      summary: Get latest audit logs
+      description: Retrieve the most recent audit log entries
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      responses:
+        '200':
+          description: Audit logs retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  logs:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        action:
+                          type: string
+                        entity:
+                          type: string
+                        timestamp:
+                          type: string
+                          format: date-time
+                        metadata:
+                          type: object
+                  count:
+                    type: integer
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal server error
+
+  /api/telemetry/latest:
+    get:
+      summary: Get latest telemetry events
+      description: Retrieve the most recent telemetry events
+      security:
+        - bearerAuth: []
+        - cookieAuth: []
+      responses:
+        '200':
+          description: Telemetry events retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  events:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        type:
+                          type: string
+                        timestamp:
+                          type: string
+                          format: date-time
+                        payload:
+                          type: object
+                  count:
+                    type: integer
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal server error
+
+  components:
   securitySchemes:
     bearerAuth:
       type: http

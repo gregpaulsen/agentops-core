@@ -1,0 +1,62 @@
+name: PaulyOps System Doctor
+
+on:
+  schedule:
+    # Run nightly at 3am PT (10am UTC)
+    - cron: '0 10 * * *'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  doctor:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: latest
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Run System Doctor Scan
+      run: pnpm doctor:scan
+      env:
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+        NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+
+    - name: Run System Doctor Repair (main branch only)
+      if: github.ref == 'refs/heads/main'
+      run: pnpm doctor:repair
+      env:
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+        NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+
+    - name: Upload status artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: doctor-status
+        path: apps/api/public/status.json
+        retention-days: 7
+
+    - name: Notify on failure
+      if: failure()
+      uses: 8398a7/action-slack@v3
+      with:
+        status: failure
+        webhook_url: ${{ secrets.DOCTOR_SLACK_WEBHOOK_URL }}
+        text: '🩺 PaulyOps Doctor: FAIL on GitHub Actions'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.DOCTOR_SLACK_WEBHOOK_URL }}

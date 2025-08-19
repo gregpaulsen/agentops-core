@@ -1,0 +1,39 @@
+{
+  "name": "inbox-cleaner",
+  "version": "1.0.0",
+  "description": "Automated email inbox management and organization",
+  "connectors": [
+    {
+      "connector": "gmail",
+      "scopes": ["gmail.read", "gmail.modify", "gmail.labels"]
+    },
+    {
+      "connector": "drive",
+      "scopes": ["drive.read", "drive.write"]
+    }
+  ],
+  "inputs": {
+    "filters": {
+      "type": "object",
+      "properties": {
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "dateRange": { "type": "string" },
+        "labels": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  },
+  "outputs": {
+    "processedEmails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "action": { "type": "string" },
+          "timestamp": { "type": "string" }
+        }
+      }
+    }
+  },
+  "riskLevel": "medium"
+}

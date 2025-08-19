@@ -1,0 +1,16 @@
+{
+  "lastRun": "2025-08-19T04:48:58.328Z",
+  "summary": {
+    "ok": 3,
+    "warn": 1,
+    "fail": 5
+  },
+  "failingChecks": [
+    "env",
+    "db",
+    "prismaGenerate",
+    "prismaMigrate",
+    "build"
+  ],
+  "mode": "scan"
+}

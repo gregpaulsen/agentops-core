@@ -1,0 +1,26 @@
+{
+  "name": "@paulyops/doctor",
+  "version": "1.0.0",
+  "description": "PaulyOps System Doctor - Self-healing subsystem",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "doctor": "dist/bin/doctor.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@paulyops/shared": "workspace:*",
+    "execa": "^7.1.1",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  }
+}

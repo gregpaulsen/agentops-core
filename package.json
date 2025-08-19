@@ -4,17 +4,38 @@
   "description": "PaulyOps Backend with SOC2 Compliance",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter @paulyops/api dev",
-    "build": "pnpm --filter @paulyops/shared build && pnpm --filter @paulyops/api build",
-    "lint": "pnpm --filter @paulyops/api lint",
-    "test": "pnpm --filter @paulyops/api test",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "biome format --write .",
+    "lint:fix": "biome lint --write .",
+    "check": "biome check .",
     "prisma:generate": "pnpm --filter @paulyops/shared prisma:generate",
     "prisma:migrate": "pnpm --filter @paulyops/shared prisma:migrate",
     "prisma:studio": "pnpm --filter @paulyops/shared prisma:studio",
-    "openapi:generate": "pnpm dlx openapi-typescript openapi/openapi.yaml -o packages/schemas/src/openapi-types.ts"
+    "openapi:generate": "pnpm dlx openapi-typescript openapi/openapi.yaml -o packages/schemas/src/openapi-types.ts",
+    "doctor:scan": "node packages/doctor/dist/bin/doctor.js scan",
+    "doctor:repair": "node packages/doctor/dist/bin/doctor.js repair",
+    "doctor:surgical": "node packages/doctor/dist/bin/doctor.js surgical",
+    "db:generate": "turbo run db:generate",
+    "db:migrate": "turbo run db:migrate",
+    "clean": "turbo run clean"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
     "@types/node": "^20.10.0",
+    "@types/pg": "^8.15.5",
+    "drizzle-kit": "^0.31.4",
+    "drizzle-zod": "^0.8.3",
+    "ts-reset": "^0.0.1",
+    "turbo": "^2.5.6",
     "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "better-auth": "^1.3.7",
+    "drizzle-orm": "^0.44.4",
+    "pg": "^8.16.3",
+    "zod": "^3.25.76"
   }
 }

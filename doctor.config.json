@@ -1,0 +1,37 @@
+{
+  "mode": "repair",
+  "allowSurgical": false,
+  "checks": {
+    "env": true,
+    "db": true,
+    "prismaGenerate": true,
+    "prismaMigrate": true,
+    "depsSync": true,
+    "build": true,
+    "disk": true,
+    "memoryCpu": true,
+    "providers": true
+  },
+  "thresholds": {
+    "diskFreePctMin": 10,
+    "memFreePctMin": 10,
+    "cpuLoadMax": 4
+  },
+  "notifications": {
+    "slackWebhook": "${DOCTOR_SLACK_WEBHOOK_URL}",
+    "discordWebhook": ""
+  },
+  "statusPage": "apps/api/public/status.json",
+  "whitelistCommands": [
+    "pnpm install",
+    "pnpm -w install",
+    "pnpm build",
+    "pnpm -w build",
+    "pnpm dlx prisma generate",
+    "pnpm dlx prisma migrate deploy",
+    "pnpm dlx prisma migrate status",
+    "node -v",
+    "df -k .",
+    "uptime"
+  ]
+}
