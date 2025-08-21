@@ -1,58 +1,15 @@
-# Node / JS
-node_modules/
-.npm/
-.pnpm-store/
+# Build caches
+.turbo/
+.parcel-cache/
 .next/
-dist/
-build/
-coverage/
-*.log
+**/.cache/
+**/__pycache__/
+*.tsbuildinfo
 
-# Python
-.venv/
-__pycache__/
-*.pyc
-.pytest_cache/
-
-# OS / Editor
+# OS/filesystem
 .DS_Store
-.vscode/
-.idea/
+Thumbs.db
 
-# Local runtime
-logs/
-tmp/
-
-# Archives / Binaries (we'll use LFS if truly needed)
-*.zip
-*.tar
-*.tar.gz
-*.tgz
-*.7z
-*.rar
-*.dmg
-*.pkg
-*.iso
-*.img
-*.bin
-*.dll
-*.so
-*.node
-*.mp4
-*.mov
-*.avi
-*.mkv
-*.wav
-*.flac
-*.tif
-*.tiff
-*.onnx
-*.pth
-
-# Local storage (kept out of Git)
-storage/*
-!storage/**/*.manifest.json
-!storage/**/.keep
-
-# env files
-.env*
+# Audit dumps & local reports (kept in Archives)
+AUDIT/
+_reports_local/
